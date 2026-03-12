@@ -1,7 +1,9 @@
 buildscript {
     repositories {
+        maven { url = "https://maven.minecraftforge.net/" }
+        maven { url = "https://maven.minecraftforge.net/net/minecraftforge/gradle/" }
+        maven { url = "https://repo1.maven.org/maven2/" }
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
@@ -18,24 +20,23 @@ archivesBaseName = "scpgate"
 sourceCompatibility = targetCompatibility = '1.8'
 
 minecraft {
-    version = "1.12.2-14.23.5.2860"
-    runDir  = "run"
+    version  = "1.12.2-14.23.5.2855"
+    runDir   = "run"
     mappings = "stable_39"
     makeObfSourceJar = false
 }
 
 repositories {
+    maven { url = "https://maven.minecraftforge.net/" }
+    maven { url = "https://libraries.minecraft.net/" }
     mavenCentral()
 }
 
-dependencies {
-    // Forge è incluso automaticamente
-}
+dependencies {}
 
 processResources {
-    inputs.property "version",    project.version
-    inputs.property "mcversion",  project.minecraft.version
-
+    inputs.property "version",   project.version
+    inputs.property "mcversion", project.minecraft.version
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
         expand 'version': project.version, 'mcversion': project.minecraft.version
@@ -48,10 +49,10 @@ processResources {
 jar {
     manifest {
         attributes([
-            "Specification-Title":      "scpgate",
-            "Specification-Version":    "1",
-            "Implementation-Title":     project.name,
-            "Implementation-Version":   project.version
+            "Specification-Title":   "scpgate",
+            "Specification-Version": "1",
+            "Implementation-Title":  project.name,
+            "Implementation-Version": project.version
         ])
     }
 }
