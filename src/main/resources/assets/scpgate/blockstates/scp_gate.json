@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "scpgate:scp_gate" },
+    "facing=south": { "model": "scpgate:scp_gate", "y": 180 },
+    "facing=east":  { "model": "scpgate:scp_gate", "y": 90  },
+    "facing=west":  { "model": "scpgate:scp_gate", "y": 270 }
+  }
+}

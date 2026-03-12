@@ -1,0 +1,24 @@
+{
+  "door.open": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "scpgate:bigdooropen1",
+        "stream": false,
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "door.close": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "scpgate:bigdoorclose2",
+        "stream": false,
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  }
+}

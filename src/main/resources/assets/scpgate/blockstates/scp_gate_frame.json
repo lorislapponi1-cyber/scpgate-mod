@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "scpgate:scp_gate_frame" },
+    "facing=south": { "model": "scpgate:scp_gate_frame" },
+    "facing=east":  { "model": "scpgate:scp_gate_frame" },
+    "facing=west":  { "model": "scpgate:scp_gate_frame" }
+  }
+}
